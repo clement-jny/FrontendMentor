@@ -1,0 +1,1 @@
+[qr code component](https://clement-jny.github.io/frontendMentor/qr-code-component/)
