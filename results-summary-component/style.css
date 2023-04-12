@@ -3,22 +3,22 @@
 
 :root {
 	/* Primary color */
-	--lightRed: hsl(0, 100%, 67%);
-	--orangeyYellow: hsl(39, 100%, 56%);
-	--greenTeal: hsl(166, 100%, 37%);
-	--cobaltBlue: hsl(234, 85%, 45%);
+	--lightRed: hsl(0, 100%, 67%); /* Reaction - back & color */
+	--orangeyYellow: hsl(39, 100%, 56%); /* Memory - back & color */
+	--greenTeal: hsl(166, 100%, 37%); /* Verbal - back & color */
+	--cobaltBlue: hsl(234, 85%, 45%); /* Visual - back & color */
 
 	/* Grandients color */
-	--lightSlateBlue: hsl(252, 100%, 67%); /*background*/
-	--lightRoyalBlue: hsl(241, 81%, 54%); /*background*/
-	--violetBlue: hsla(256, 72%, 46%, 1); /*circle*/
-	--persianBlue: hsla(241, 72%, 46%, 0); /*circle*/
+	--lightSlateBlue: hsl(252, 100%, 67%); /* Left back gradient */
+	--lightRoyalBlue: hsl(241, 81%, 54%); /* Left back gradient */
+	--violetBlue: hsla(256, 72%, 46%, 1); /* Left back circle gradient */
+	--persianBlue: hsla(241, 72%, 46%, 0); /* Left back circle gradient */
 
 	/* Neutral color */
-	--white: hsl(0, 0%, 100%);
-	--paleBlue: hsl(221, 100%, 96%);
-	--lightLavender: hsl(241, 100%, 89%);
-	--darkGrayBlue: hsl(224, 30%, 27%);
+	--white: hsl(0, 0%, 100%); /* Global & right back */
+	--paleBlue: hsl(221, 100%, 96%); /* Shadow */
+	--lightLavender: hsl(241, 100%, 89%); /* Some text left board */
+	--darkGrayBlue: hsl(224, 30%, 27%); /* Score & button right board */
 }
 
 * {
@@ -33,67 +33,189 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: var(--white);
 }
 
 
-#container {
+.container {
 	display: flex;
 	flex-direction: row;
+	background-color: var(--white);
+	height: 400px;
+	width: 600px;
+	border-radius: 20px;
+	box-shadow: 10px 7px 20px 10px var(--paleBlue);
 }
 
 
-#container #left_board {
+/* Left board */
+.container__left-board {
 	width: 50%;
 	color: var(--white);
+	border-radius: 20px;
 	text-align: center;
+	background: linear-gradient(var(--lightSlateBlue), var(--lightRoyalBlue));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.container__left-board .left-board__result {
+	color: var(--lightLavender);
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.container__left-board .left-board__score {
+	background: linear-gradient(var(--violetBlue), var(--persianBlue));
+	height: 150px;
+	width: 150px;
+	border-radius: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.container__left-board .left-board__score h1 {
+	font-size: 50px;
+	font-weight: 800;
+}
+.container__left-board .left-board__score p {
+	color: var(--lightLavender);
+}
+
+.container__left-board .left-board__text {
+	width: 225px;
+	margin-top: 10px;
+}
+.container__left-board .left-board__text h2 {
+	margin-bottom: 15px;
+	font-weight: 500;
+}
+.container__left-board .left-board__text p {
+	color: var(--lightLavender);
+}
+
+
+/* Right board */
+.container__right-board {
+	width: 50%;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+}
+.container__right-board .right-board__summary {
+	font-size: 18px;
+	font-weight: 700;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+
+.container__right-board .right-board__item {
+	padding: 10px;
+	margin-bottom: 13px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* .right-board__item p {
+	color: var(--darkGrayBlue);
+} */
+
+.container__right-board .right-board__reaction {
+	background-color: hsla(0, 100%, 67%, 0.1);
+	color: var(--lightRed);
+}
+.container__right-board .right-board__reaction .reaction__text {
+	display: flex;
+	gap: 10px;
+}
+.container__right-board .right-board__reaction .reaction__score {
+	color: hsla(224, 30%, 27%, 0.5)
+}
+.container__right-board .right-board__reaction .reaction__score span {
+	color: var(--darkGrayBlue);
+	font-weight: 700;
+	margin-right: 5px;
+}
+
+.container__right-board .right-board__memory {
+	background-color: hsla(39, 100%, 56%, 0.1);
+	color: var(--orangeyYellow);
+}
+.container__right-board .right-board__memory .memory__text {
+	display: flex;
+	gap: 10px;
+}
+.container__right-board .right-board__memory .memory__score {
+	color: hsla(224, 30%, 27%, 0.5)
+}
+.container__right-board .right-board__memory .memory__score span {
+	color: var(--darkGrayBlue);
+	font-weight: 700;
+	margin-right: 5px;
+}
+
+.container__right-board .right-board__verbal {
+	background-color: hsla(166, 100%, 37%, 0.1);
+	color: var(--greenTeal);
+}
+.container__right-board .right-board__verbal .verbal__text {
+	display: flex;
+	gap: 10px;
+}
+.container__right-board .right-board__verbal .verbal__score {
+	color: hsla(224, 30%, 27%, 0.5)
+}
+.container__right-board .right-board__verbal .verbal__score span {
+	color: var(--darkGrayBlue);
+	font-weight: 700;
+	margin-right: 5px;
+}
+
+.container__right-board .right-board__visual {
+	background-color: hsla(234, 85%, 45%, 0.1);
+	color: var(--cobaltBlue);
+}
+.container__right-board .right-board__visual .visual__text {
+	display: flex;
+	gap: 10px;
+}
+.container__right-board .right-board__visual .visual__score {
+	color: hsla(224, 30%, 27%, 0.5)
+}
+.container__right-board .right-board__visual .visual__score span {
+	color: var(--darkGrayBlue);
+	font-weight: 700;
+	margin-right: 5px;
+}
+
+
+.container__right-board button {
+	color: var(--white);
+	margin-top: 20px;
+	padding: 15px;
+	border: none;
+	border-radius: 30px;
+	background-color: var(--darkGrayBlue)
+}
+.container__right-board button:hover {
+	cursor: pointer;
 	background: linear-gradient(var(--lightSlateBlue), var(--lightRoyalBlue));
 }
 
-#container #left_board #left_result {
-	color: var(--lightLavender);
-	margin: 25px;
-}
 
-#container #left_board #left_score {
-	border-radius: 50%;
-	box-shadow: inset 10px 5px var(--lightSlateBlue) inset 10px 5px var(--lightRoyalBlue);
-}
-
-
-
-
-
-#container #right_board {
-	width: 50%;
-	margin: 25px;
-}
-
-#container #right_reaction {
-	background-color: var(--lightRed);
-	color: var(--lightRed);
-}
-
-#container #right_memory {
-	color: var(--orangeyYellow);
-}
-
-#container #right_verbal {
-	color: var(--greenTeal);
-}
-
-#container #right_visual {
-	color: var(--cobaltBlue);
-}
-
-
-#attribution {
+.attribution {
 	position: absolute;
 	bottom: 0;
 	margin-bottom: 1rem;
 	font-size: 11px;
 	text-align: center;
 }
-
-#attribution a {
+.attribution a {
 	color: hsl(228, 45%, 44%);
 }

@@ -13,40 +13,46 @@
 </head>
 
 <body>
-	<main id="container">
-		<div id="left_board">
-			<p id="left_result">Your Result</p>
+	<main class="container">
+		<div class="container__left-board">
+			<p class="left-board__result">Your Result</p>
 
-			<div id="left_score">
+			<div class="left-board__score">
 				<h1>76</h1>
 				<p>of 100</p>
 			</div>
 
-			<h2>Great</h2>
-			<p>You scored higher than 65% of the people who have taken these tests.</p>
+			<div class="left-board__text">
+				<h2>Great</h2>
+				<p>You scored higher than 65% of the people who have taken these tests.</p>
+			</div>
 		</div>
 
-		<div id="right_board">
-			<h2>Summary</h2>
+		<div class="container__right-board">
+			<p class="right-board__summary">Summary</p>
 
-			<div id="right_reaction">
-				<p>Reaction <span>80</span> / 100</p>
+			<div class="right-board__item right-board__reaction">
+				<p class="reaction__text"><img src="./assets/icon-reaction.svg" alt="Reaction icon" /> Reaction</p>
+				<p class="reaction__score"><span>80</span> / 100</p>
 			</div>
-			<div id="right_memory">
-				<p>Memory <span>92</span> / 100</p>
+			<div class="right-board__item right-board__memory">
+				<p class="memory__text"><img src="./assets/icon-memory.svg" alt="Memory icon" /> Memory</p>
+				<p class="memory__score"><span>92</span> / 100</p>
 			</div>
-			<div id="right_verbal">
-				<p>Verbal <span>61</span> / 100</p>
+			<div class="right-board__item right-board__verbal">
+				<p class="verbal__text"><img src="./assets/icon-verbal.svg" alt="Verbal icon" /> Verbal</p>
+				<p class="verbal__score"><span>61</span> / 100</p>
 			</div>
-			<div id="right_visual">
-				<p>Visual <span>72</span> / 100</p>
+			<div class="right-board__item right-board__visual">
+				<p class="visual__text"><img src="./assets/icon-visual.svg" alt="Visual icon" /> Visual</p>
+				<p class="visual__score"><span>72</span> / 100</p>
 			</div>
 
 			<button>Continue</button>
 		</div>
 	</main>
 
-	<footer id="attribution">
+	<footer class="attribution">
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
 		Coded by <a href="https://github.com/clement-jny">Clément</a>.
 	</footer>
