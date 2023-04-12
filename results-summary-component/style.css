@@ -41,8 +41,10 @@ body {
 	display: flex;
 	flex-direction: row;
 	background-color: var(--white);
-	height: 400px;
-	width: 600px;
+	/* height: 400px;
+	width: 600px; */
+	height: 510px;
+	width: 735;
 	border-radius: 20px;
 	box-shadow: 10px 7px 20px 10px var(--paleBlue);
 }
